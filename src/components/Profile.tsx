@@ -1,5 +1,4 @@
 import { Github, Globe, Linkedin, Share } from 'lucide-react';
-import React from 'react'
 
 // Tech Icons as SVG Components
 const TechIcon = ({ children, name }: { children: React.ReactNode; name: string }) => (

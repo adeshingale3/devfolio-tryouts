@@ -1,5 +1,4 @@
 import { FolderGit2, Medal, Trophy } from 'lucide-react'
-import React from 'react'
 
 const Achievements = () => {
   return (

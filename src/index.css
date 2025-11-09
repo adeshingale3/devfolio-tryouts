@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+.montserrat {
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+
+@keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  
+  .animate-scroll {
+    display: flex;
+    animation: scroll 25s linear infinite;
+    width: max-content;
+  }
+  
+  .animate-scroll:hover {
+    animation-play-state: paused;
+  }
+  

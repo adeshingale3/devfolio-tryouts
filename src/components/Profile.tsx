@@ -213,7 +213,7 @@ const Profile = () => {
       {/* TOP SECTION */}
       <div className="flex flex-col lg:flex-row items-center gap-8 pt-4">
         {/* Left Section (Profile Info + Socials for Mobile) */}
-        <div className="flex flex-row gap-4 justify-between items-center gap-22">
+        <div className="flex flex-row gap-4 justify-between items-center gap-26">
           {/* Profile Image */}
           <div className='flex flex-col sm:flex-col md:flex-row items-start sm:items-start md:items-center gap-4'>
             <img

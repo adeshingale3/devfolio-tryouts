@@ -209,7 +209,7 @@ const Profile = () => {
   };
 
   return (
-    <div className="w-full px-0 sm:px-0 lg:px-40 bg-white">
+    <div className="w-full px-0 sm:px-0 lg:px-40 bg-white pt-0 sm:pt-0 lg:pt-8 ">
       {/* TOP SECTION */}
       <div className="flex flex-col lg:flex-row items-center gap-8 pt-4">
         {/* Left Section (Profile Info + Socials for Mobile) */}
@@ -220,8 +220,8 @@ const Profile = () => {
             className="w-24 h-24 rounded-full ring-4 ring-white shadow-lg transition-all duration-300 hover:scale-105"
             src="https://devfolio.co/_next/image?url=https%3A%2F%2Fassets.devfolio.co%2Fusers%2Fb7e8d98e741f48eea51cab6b859695d1%2Favatar-f1185bde-bb1b-44ca-b5e1-243e01e8cbbf.jpeg&w=360&q=75"
             alt="Profile"
-          />
-
+            />
+            
           {/* Name + Username */}
           <div className="flex flex-col items-start sm:items-start">
             <h1 className="text-lg sm:text-lg lg:text-2xl font-bold text-gray-800 montserrat">Adesh Ingale</h1>

@@ -39,3 +39,46 @@
     animation-play-state: paused;
   }
   
+
+
+
+  @keyframes rotate-slow {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 0.35;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.05);
+  }
+}
+
+
+
+@keyframes shake {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(1px, -2px) rotate(-3deg);
+  }
+  50% {
+    transform: translate(-1px, 1px) rotate(3deg);
+  }
+  75% {
+    transform: translate(1px, 2px) rotate(-2deg);
+  }
+}
+
+.animate-shake {
+  animation: shake 1.5s ease-in-out infinite;
+}

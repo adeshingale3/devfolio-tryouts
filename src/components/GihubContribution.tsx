@@ -130,26 +130,65 @@ const GihubContribution = ({ username = 'adeshingale3' }: GitHubContributionProp
           <h1 className="text-lg font-bold text-gray-400 montserrat">GITHUB</h1>
 
           {/* Tabs */}
-          <div className="flex gap-4 text-sm font-medium">
-            <button
-              onClick={() => setActiveTab('github')}
-              className={`flex items-center gap-1 px-3 py-1 rounded-md transition-all duration-300 ${activeTab === 'github' ? 'bg-sky-100 text-sky-600' : 'text-gray-500 hover:text-sky-500'}`}
-            >
-              <Github size={16} /> GitHub
-            </button>
-            <button
-              onClick={() => setActiveTab('projects')}
-              className={`flex items-center gap-1 px-3 py-1 rounded-md transition-all duration-300 ${activeTab === 'projects' ? 'bg-sky-100 text-sky-600' : 'text-gray-500 hover:text-sky-500'}`}
-            >
-              <FolderGit2 size={16} /> Projects
-            </button>
-            <button
-              onClick={() => setActiveTab('readme')}
-              className={`flex items-center gap-1 px-3 py-1 rounded-md transition-all duration-300 ${activeTab === 'readme' ? 'bg-sky-100 text-sky-600' : 'text-gray-500 hover:text-sky-500'}`}
-            >
-              <Book size={16} /> README
-            </button>
-          </div>
+          <div
+  className="
+    w-full 
+    flex 
+    flex-col-reverse sm:flex-row 
+    items-center sm:justify-center 
+    gap-2 sm:gap-4 
+    text-sm font-medium 
+    mb-4 sm:mb-0
+  "
+>
+  {/* Tabs - Top horizontal bar on mobile */}
+  <div className="
+    flex 
+    w-full 
+    justify-center sm:justify-center
+    items-center sm:items-center 
+    gap-2 sm:gap-4 
+    
+    border-b sm:border-0 
+    pb-2 sm:pb-0
+    mb-20
+  ">
+    <button
+      onClick={() => setActiveTab('github')}
+      className={`flex items-center gap-1 px-3 py-1.5 rounded-md transition-all duration-300 whitespace-nowrap ${
+        activeTab === 'github'
+          ? 'bg-sky-100 text-sky-600 font-semibold'
+          : 'text-gray-500 hover:text-sky-500'
+      }`}
+    >
+      <Github size={16} /> GitHub
+    </button>
+
+    <button
+      onClick={() => setActiveTab('projects')}
+      className={`flex items-center gap-1 px-3 py-1.5 rounded-md transition-all duration-300 whitespace-nowrap ${
+        activeTab === 'projects'
+          ? 'bg-sky-100 text-sky-600 font-semibold'
+          : 'text-gray-500 hover:text-sky-500'
+      }`}
+    >
+      <FolderGit2 size={16} /> Projects
+    </button>
+
+    <button
+      onClick={() => setActiveTab('readme')}
+      className={`flex items-center gap-1 px-3 py-1.5 rounded-md transition-all duration-300 whitespace-nowrap ${
+        activeTab === 'readme'
+          ? 'bg-sky-100 text-sky-600 font-semibold'
+          : 'text-gray-500 hover:text-sky-500'
+      }`}
+    >
+      <Book size={16} /> README
+    </button>
+  </div>
+</div>
+
+
         </div>
 
         {/* Conditional Tabs Content */}
@@ -181,38 +220,38 @@ const GihubContribution = ({ username = 'adeshingale3' }: GitHubContributionProp
               </div>
               <div className='flex flex-row gap-4'>
                 <div className="flex gap-[10px]">
-                {Array.from({ length: Math.ceil(lastMonthContributions.length / 7) }).map((_, weekIndex) => {
-                  const week = lastMonthContributions.slice(weekIndex * 7, weekIndex * 7 + 7);
-                  return (
-                    <div key={weekIndex} className="flex flex-col gap-[3px]">
-                      {week.map((d, i) => (
-                        <div
-                          key={i}
-                          className={`w-4 h-4 rounded-sm ${getSkyBlueColorClass(d.level)} hover:scale-125 transition-all duration-200 cursor-pointer`}
-                          title={`${d.count} contributions on ${d.date}`}
-                        />
-                      ))}
-                    </div>
-                  );
-                })}
-              </div>
+                  {Array.from({ length: Math.ceil(lastMonthContributions.length / 7) }).map((_, weekIndex) => {
+                    const week = lastMonthContributions.slice(weekIndex * 7, weekIndex * 7 + 7);
+                    return (
+                      <div key={weekIndex} className="flex flex-col gap-[3px]">
+                        {week.map((d, i) => (
+                          <div
+                            key={i}
+                            className={`w-4 h-4 rounded-sm ${getSkyBlueColorClass(d.level)} hover:scale-125 transition-all duration-200 cursor-pointer`}
+                            title={`${d.count} contributions on ${d.date}`}
+                          />
+                        ))}
+                      </div>
+                    );
+                  })}
+                </div>
 
-              <div className="flex gap-[10px]">
-                {Array.from({ length: Math.ceil(lastMonthContributions.length / 7) }).map((_, weekIndex) => {
-                  const week = lastMonthContributions.slice(weekIndex * 7, weekIndex * 7 + 7);
-                  return (
-                    <div key={weekIndex} className="flex flex-col gap-[3px]">
-                      {week.map((d, i) => (
-                        <div
-                          key={i}
-                          className={`w-4 h-4 rounded-sm ${getSkyBlueColorClass(d.level)} hover:scale-125 transition-all duration-200 cursor-pointer`}
-                          title={`${d.count} contributions on ${d.date}`}
-                        />
-                      ))}
-                    </div>
-                  );
-                })}
-              </div>
+                <div className="flex gap-[10px]">
+                  {Array.from({ length: Math.ceil(lastMonthContributions.length / 7) }).map((_, weekIndex) => {
+                    const week = lastMonthContributions.slice(weekIndex * 7, weekIndex * 7 + 7);
+                    return (
+                      <div key={weekIndex} className="flex flex-col gap-[3px]">
+                        {week.map((d, i) => (
+                          <div
+                            key={i}
+                            className={`w-4 h-4 rounded-sm ${getSkyBlueColorClass(d.level)} hover:scale-125 transition-all duration-200 cursor-pointer`}
+                            title={`${d.count} contributions on ${d.date}`}
+                          />
+                        ))}
+                      </div>
+                    );
+                  })}
+                </div>
               </div>
 
             </div>
@@ -252,24 +291,24 @@ const GihubContribution = ({ username = 'adeshingale3' }: GitHubContributionProp
         {activeTab === 'projects' && (
           <div className="flex flex-row flex-wrap px-4 gap-6 mt-4 items-center justify-center">
             <ProjectCard
-    logo="https://cdn-icons-png.flaticon.com/512/5968/5968292.png"
-    name="VotingChain"
-    description="A secure blockchain-based voting system with biometric authentication."
-    hackathon="Smart India Hackathon"
-  />
+              logo="https://cdn-icons-png.flaticon.com/512/5968/5968292.png"
+              name="VotingChain"
+              description="A secure blockchain-based voting system with biometric authentication."
+              hackathon="Smart India Hackathon"
+            />
             <ProjectCard
-    logo="https://cdn-icons-png.flaticon.com/512/5968/5968705.png"
-    name="EyeSense"
-    description="AI-powered platform for predicting eye diseases using ML models."
-    hackathon="Google DevFest"
-  />
+              logo="https://cdn-icons-png.flaticon.com/512/5968/5968705.png"
+              name="EyeSense"
+              description="AI-powered platform for predicting eye diseases using ML models."
+              hackathon="Google DevFest"
+            />
 
-  <ProjectCard
-    logo="https://cdn-icons-png.flaticon.com/512/5968/5968672.png"
-    name="MotivAI Chat"
-    description="A motivational chatbot that uses NLP to provide emotional support."
-    hackathon="AIthon 2025"
-  />
+            <ProjectCard
+              logo="https://cdn-icons-png.flaticon.com/512/5968/5968672.png"
+              name="MotivAI Chat"
+              description="A motivational chatbot that uses NLP to provide emotional support."
+              hackathon="AIthon 2025"
+            />
 
             <div>
 

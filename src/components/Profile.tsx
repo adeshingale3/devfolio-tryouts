@@ -231,7 +231,7 @@ const Profile = () => {
 
           {/* Social Links (Row on mobile) */}
           <div className="flex flex-col gap-3 items-center flex-wrap sm:hidden">
-            <div className=' flex flex-row'>
+            <div className=' flex flex-row gap-3'>
                 <a
               href="https://github.com"
               target="_blank"
@@ -251,7 +251,7 @@ const Profile = () => {
               <Linkedin size={18} />
             </a>
             </div>
-            <div className='flex flex-row'>
+            <div className='flex flex-row gap-3'>
                 <a
               href="https://portfolio.com"
               target="_blank"

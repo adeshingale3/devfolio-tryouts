@@ -209,9 +209,9 @@ const Profile = () => {
   };
 
   return (
-    <div className="w-full px-2 sm:px-6 md:px-12 lg:px-40 py-8 bg-white">
+    <div className="w-full px-0 sm:px-0 lg:px-40 bg-white">
       {/* TOP SECTION */}
-      <div className="flex flex-col lg:flex-row justify-between items-center gap-8">
+      <div className="flex flex-col lg:flex-row items-center gap-8 pt-4">
         {/* Left Section (Profile Info + Socials for Mobile) */}
         <div className="flex flex-row gap-4">
           {/* Profile Image */}
@@ -230,8 +230,9 @@ const Profile = () => {
           </div>
 
           {/* Social Links (Row on mobile) */}
-          <div className="flex flex-col gap-3 items-center justify-start flex-wrap mb-20 sm:hidden">
-            <a
+          <div className="flex flex-col gap-3 items-center flex-wrap sm:hidden">
+            <div className=' flex flex-row'>
+                <a
               href="https://github.com"
               target="_blank"
               rel="noopener noreferrer"
@@ -249,7 +250,9 @@ const Profile = () => {
             >
               <Linkedin size={18} />
             </a>
-            <a
+            </div>
+            <div className='flex flex-row'>
+                <a
               href="https://portfolio.com"
               target="_blank"
               rel="noopener noreferrer"
@@ -265,6 +268,8 @@ const Profile = () => {
             >
               <Share size={18} color="black" />
             </button>
+            </div>
+            
           </div>
         </div>
 

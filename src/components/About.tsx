@@ -33,7 +33,7 @@ const About = () => {
 
   return (
     <>
-      <div className='w-full px-8 md:px-20 lg:px-40 py-6 bg-gradient-to-br from-white to-gray-50'>
+      <div className='w-full px-8 md:px-20 lg:px-40 py-4 bg-gradient-to-br from-white to-gray-50'>
         <div className='flex flex-col lg:flex-row justify-between items-start gap-12'>
         {/* About me */}
           <div className='flex flex-col gap-4 flex-1'>

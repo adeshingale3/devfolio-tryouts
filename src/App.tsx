@@ -15,6 +15,7 @@ const App = () => {
       <About />
       <Skills />
       <Achievements />
+    
       <GihubContribution />
 
     </div>

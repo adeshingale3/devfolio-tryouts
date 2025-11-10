@@ -24,9 +24,9 @@ const Navbar = () => {
           </h1>
 
           {/* Desktop Menu */}
-          <div className="hidden sm:flex text-gray-600 flex-row gap-8 text-md ml-10">
-            <h3 className="cursor-pointer hover:text-black transition-colors">Home</h3>
-            <h3 className="cursor-pointer hover:text-black transition-colors">Blog</h3>
+          <div className="hidden sm:flex text-gray-400 flex-row gap-8 text-md ml-10">
+            <h3 className="cursor-pointer hover:text-blue-400 transition-colors font-semibold">Home</h3>
+            <h3 className="cursor-pointer hover:text-blue-400 transition-colors font-semibold">Blog</h3>
           </div>
         </div>
 
@@ -48,10 +48,10 @@ const Navbar = () => {
       {/* Mobile Dropdown Menu */}
       {menuOpen && (
         <div className="absolute top-16 left-0 w-full bg-white shadow-md border-t border-gray-200 flex flex-col items-center py-4 gap-3 animate-slideDown">
-          <h3 className="cursor-pointer text-gray-700 hover:text-black transition-colors">
+          <h3 className="cursor-pointer text-gray-700 hover:text-black transition-colors font-semibold">
             Home
           </h3>
-          <h3 className="cursor-pointer text-gray-700 hover:text-black transition-colors">
+          <h3 className="cursor-pointer text-gray-700 hover:text-black transition-colors font-semibold">
             Blog
           </h3>
         </div>

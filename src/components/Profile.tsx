@@ -209,7 +209,7 @@ const Profile = () => {
   };
 
   return (
-    <div className="w-full px-6 sm:px-6 md:px-40 py-8 bg-white">
+    <div className="w-full px-2 sm:px-6 md:px-12 lg:px-40 py-8 bg-white">
       {/* TOP SECTION */}
       <div className="flex flex-col lg:flex-row justify-between items-center gap-8">
         {/* Left Section (Profile Info + Socials for Mobile) */}
@@ -230,7 +230,7 @@ const Profile = () => {
           </div>
 
           {/* Social Links (Row on mobile) */}
-          <div className="flex flex-row gap-3 items-center justify-start flex-wrap mb-20 sm:hidden">
+          <div className="flex flex-col gap-3 items-center justify-start flex-wrap mb-20 sm:hidden">
             <a
               href="https://github.com"
               target="_blank"

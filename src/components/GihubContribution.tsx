@@ -260,32 +260,33 @@ const GihubContribution = ({ username = 'adeshingale3' }: GitHubContributionProp
 
             {/* Pinned Repos */}
             <div className="mt-10">
-              <h2 className="text-lg font-semibold text-gray-800 mb-4">Pinned Repositories</h2>
-              <div className="grid gap-4">
-                {pinnedRepos.map((repo) => (
-                  <a
-                    key={repo.id}
-                    href={repo.html_url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-4 border border-gray-200 rounded-lg hover:border-sky-400 hover:shadow-md transition-all duration-300"
-                  >
-                    <h3 className="text-sky-600 font-semibold">{repo.name}</h3>
-                    <p className="text-sm text-gray-600 mt-1">{repo.description}</p>
-                    <div className="flex items-center gap-3 text-xs text-gray-500 mt-2">
-                      {repo.language && (
-                        <span className="flex items-center gap-1">
-                          <span className={`w-3 h-3 rounded-full ${getLanguageColor(repo.language)}`}></span>
-                          {repo.language}
-                        </span>
-                      )}
-                      <span>⭐ {repo.stargazers_count}</span>
-                      <span>🍴 {repo.forks_count}</span>
-                    </div>
-                  </a>
-                ))}
-              </div>
-            </div>
+  <h2 className="text-lg font-semibold text-gray-800 mb-4">Pinned Repositories</h2>
+  <div className="grid gap-4">
+    {pinnedRepos.slice(0, 3).map((repo) => ( // 👈 show only first 3
+      <a
+        key={repo.id}
+        href={repo.html_url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="p-4 border border-gray-200 rounded-lg hover:border-sky-400 hover:shadow-md transition-all duration-300 bg-white"
+      >
+        <h3 className="text-sky-600 font-semibold">{repo.name}</h3>
+        <p className="text-sm text-gray-600 mt-1 line-clamp-2">{repo.description}</p>
+        <div className="flex items-center gap-3 text-xs text-gray-500 mt-2">
+          {repo.language && (
+            <span className="flex items-center gap-1">
+              <span className={`w-3 h-3 rounded-full ${getLanguageColor(repo.language)}`}></span>
+              {repo.language}
+            </span>
+          )}
+          <span>⭐ {repo.stargazers_count}</span>
+          <span>🍴 {repo.forks_count}</span>
+        </div>
+      </a>
+    ))}
+  </div>
+</div>
+
             </div>
 
 

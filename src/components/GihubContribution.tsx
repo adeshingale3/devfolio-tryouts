@@ -127,7 +127,7 @@ const GihubContribution = ({ username = 'adeshingale3' }: GitHubContributionProp
 
         {/* Header */}
         <div className="flex justify-between items-center">
-          <h1 className="text-lg font-bold text-gray-400 montserrat">GITHUB</h1>
+          
 
           {/* Tabs */}
           <div
@@ -138,7 +138,7 @@ const GihubContribution = ({ username = 'adeshingale3' }: GitHubContributionProp
     items-center sm:justify-center 
     gap-2 sm:gap-4 
     text-sm font-medium 
-    mb-4 sm:mb-0
+    mb-1 sm:mb-0
   "
 >
   {/* Tabs - Top horizontal bar on mobile */}
@@ -150,8 +150,8 @@ const GihubContribution = ({ username = 'adeshingale3' }: GitHubContributionProp
     gap-2 sm:gap-4 
     
     border-b sm:border-0 
-    pb-2 sm:pb-0
-    mb-20
+    pb-0 sm:pb-0
+    mb-10
   ">
     <button
       onClick={() => setActiveTab('github')}
@@ -193,7 +193,8 @@ const GihubContribution = ({ username = 'adeshingale3' }: GitHubContributionProp
 
         {/* Conditional Tabs Content */}
         {activeTab === 'github' && (
-          <div>
+          <div className='px-6'>
+            <h1 className="text-lg font-bold text-gray-400 montserrat">GITHUB</h1>
             <div className="flex gap-10 flex-wrap mt-2">
               {stats && (
                 <>
@@ -214,7 +215,8 @@ const GihubContribution = ({ username = 'adeshingale3' }: GitHubContributionProp
             </div>
 
             {/* Contribution Graph */}
-            <div className="mt-8 ">
+            <div className='flex flex-col sm:flex-col md:flex-row items-start justify-between gap-4 sm:gap-4 md:gap-60'>
+              <div className="mt-8 ">
               <div className="text-sm text-gray-600 font-medium mb-4">
                 Contributions in {monthName}
               </div>
@@ -259,7 +261,7 @@ const GihubContribution = ({ username = 'adeshingale3' }: GitHubContributionProp
             {/* Pinned Repos */}
             <div className="mt-10">
               <h2 className="text-lg font-semibold text-gray-800 mb-4">Pinned Repositories</h2>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="grid gap-4">
                 {pinnedRepos.map((repo) => (
                   <a
                     key={repo.id}
@@ -284,12 +286,20 @@ const GihubContribution = ({ username = 'adeshingale3' }: GitHubContributionProp
                 ))}
               </div>
             </div>
+            </div>
+
+
           </div>
         )}
 
         {/* Projects Tab */}
         {activeTab === 'projects' && (
-          <div className="flex flex-row flex-wrap px-4 gap-6 mt-4 items-center justify-center">
+          
+          <div>
+            <h1 className="text-lg font-bold text-gray-400 montserrat">PROJECTS</h1>
+
+            <div className="flex flex-row flex-wrap px-2 gap-6 mt-4 items-center justify-center">
+            
             <ProjectCard
               logo="https://cdn-icons-png.flaticon.com/512/5968/5968292.png"
               name="VotingChain"
@@ -309,17 +319,25 @@ const GihubContribution = ({ username = 'adeshingale3' }: GitHubContributionProp
               description="A motivational chatbot that uses NLP to provide emotional support."
               hackathon="AIthon 2025"
             />
+            <ProjectCard
+              logo="https://cdn-icons-png.flaticon.com/512/5968/5968672.png"
+              name="MotivAI Chat"
+              description="A motivational chatbot that uses NLP to provide emotional support."
+              hackathon="AIthon 2025"
+            />
 
             <div>
 
             </div>
           </div>
+            </div>
         )}
 
         {/* README Tab */}
         {activeTab === 'readme' && (
-          <div className="mt-4">
-            <h2 className="text-xl font-semibold text-gray-800 mb-3">About Me 👋</h2>
+          <div>
+                        <h1 className="text-lg font-bold text-gray-400 montserrat mb-2">README</h1>
+
             <p className="text-gray-600 leading-relaxed">
               Hey there! I'm <strong>Adesh</strong>, a frontend engineer passionate about
               building clean, scalable, and delightful user interfaces.

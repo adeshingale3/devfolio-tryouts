@@ -5,6 +5,7 @@ import About from './components/About'
 import Achievements from './components/Achievements'
 import GihubContribution from './components/GihubContribution'
 import Skills from './components/Skills'
+import Footer from './components/Footer'
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
       <Achievements />
     
       <GihubContribution />
+      <Footer />
 
     </div>
   )

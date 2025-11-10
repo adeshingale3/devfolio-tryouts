@@ -4,6 +4,7 @@ import Profile from './components/Profile'
 import About from './components/About'
 import Achievements from './components/Achievements'
 import GihubContribution from './components/GihubContribution'
+import Skills from './components/Skills'
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
       <Banner />
       <Profile />
       <About />
+      <Skills />
       <Achievements />
       <GihubContribution />
 

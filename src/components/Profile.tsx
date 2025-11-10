@@ -150,46 +150,10 @@
 
 import { Github, Globe, Linkedin, Share } from 'lucide-react';
 
-const TechIcon = ({ children, name }: { children: React.ReactNode; name: string }) => (
-  <div className="flex-shrink-0 w-12 h-12 p-3" title={name}>
-    <div className="w-full h-full">{children}</div>
-  </div>
-);
 
-const ReactIcon = () => (
-  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
-    <circle cx="12" cy="12" r="2" fill="#61DAFB" />
-    <ellipse cx="12" cy="12" rx="11" ry="4.2" stroke="#61DAFB" strokeWidth="1" fill="none" />
-    <ellipse cx="12" cy="12" rx="11" ry="4.2" stroke="#61DAFB" strokeWidth="1" fill="none" transform="rotate(60 12 12)" />
-    <ellipse cx="12" cy="12" rx="11" ry="4.2" stroke="#61DAFB" strokeWidth="1" fill="none" transform="rotate(-60 12 12)" />
-  </svg>
-);
-
-const TailwindIcon = () => (
-  <svg viewBox="0 0 24 24" fill="#06B6D4" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
-    <path d="M12 6c-2.67 0-4.33 1.33-5 4 1-1.33 2.17-1.83 3.5-1.5.76.19 1.31.74 1.91 1.35C13.39 10.78 14.8 12 18 12c2.67 0 4.33-1.33 5-4-1 1.33-2.17 1.83-3.5 1.5-.76-.19-1.31-.74-1.91-1.35C16.61 7.22 15.2 6 12 6zm-6 6c-2.67 0-4.33 1.33-5 4 1-1.33 2.17-1.83 3.5-1.5.76.19 1.31.74 1.91 1.35C7.39 16.78 8.8 18 12 18c2.67 0 4.33-1.33 5-4-1 1.33-2.17 1.83-3.5 1.5-.76-.19-1.31-.74-1.91-1.35C10.61 13.22 9.2 12 6 12z" />
-  </svg>
-);
-
-const NodeIcon = () => (
-  <svg viewBox="0 0 24 24" fill="#339933" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
-    <path d="M11.998,24c-0.321,0-0.641-0.084-0.922-0.247l-2.936-1.737..." />
-  </svg>
-);
-
-const TypeScriptIcon = () => (
-  <svg viewBox="0 0 24 24" fill="#3178C6" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
-    <path d="M1.125 0C.502 0 0 .502 0 1.125v21.75..." />
-  </svg>
-);
 
 const Profile = () => {
-  const techStack = [
-    { icon: <ReactIcon />, name: 'React' },
-    { icon: <TailwindIcon />, name: 'Tailwind CSS' },
-    { icon: <NodeIcon />, name: 'Node.js' },
-    { icon: <TypeScriptIcon />, name: 'TypeScript' },
-  ];
+  
 
   const handleShare = async () => {
     if (navigator.share) {
@@ -211,7 +175,7 @@ const Profile = () => {
   return (
     <div className="w-full px-0 sm:px-0 lg:px-40 bg-white pt-0 sm:pt-0 lg:pt-8 ">
       {/* TOP SECTION */}
-      <div className="flex flex-col lg:flex-row items-center gap-8 pt-4">
+      <div className="flex flex-col lg:flex-row items-center gap-86 pt-4">
         {/* Left Section (Profile Info + Socials for Mobile) */}
         <div className="flex flex-row gap-4 justify-between items-center gap-26">
           {/* Profile Image */}
@@ -273,20 +237,7 @@ const Profile = () => {
           </div>
         </div>
 
-        {/* Skills (Hidden on mobile) */}
-        <div className="hidden sm:block relative w-[50%] overflow-hidden">
-          <div className="flex animate-scroll gap-6">
-            {[...Array(3)].map((_, i) => (
-              <div key={i} className="flex gap-6">
-                {techStack.map((tech, index) => (
-                  <TechIcon key={`${i}-${index}`} name={tech.name}>
-                    {tech.icon}
-                  </TechIcon>
-                ))}
-              </div>
-            ))}
-          </div>
-        </div>
+        
 
         {/* Social Links (Visible only on desktop) */}
         <div className="hidden sm:flex flex-row gap-3 items-center justify-center flex-wrap">

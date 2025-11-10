@@ -1,4 +1,3 @@
-import { Share2, MessageSquareHeart, Tag } from "lucide-react";
 
 const Footer = () => {
   return (

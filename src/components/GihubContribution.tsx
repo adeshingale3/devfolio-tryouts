@@ -35,7 +35,7 @@ const GihubContribution = ({ username = 'adeshingale3' }: GitHubContributionProp
   const [contributions, setContributions] = useState<ContributionDay[]>([])
   const [pinnedRepos, setPinnedRepos] = useState<PinnedRepo[]>([])
   const [loading, setLoading] = useState(true)
-  const [error, setError] = useState<string | null>(null)
+  // const [error, setError] = useState<string | null>(null)
   const [activeTab, setActiveTab] = useState<'github' | 'projects' | 'readme'>('github')
 
   // Fetch GitHub stats
@@ -50,8 +50,6 @@ const GihubContribution = ({ username = 'adeshingale3' }: GitHubContributionProp
           following: data.following || 0,
           public_gists: data.public_gists || 0,
         })
-      } catch (err) {
-        setError('Failed to fetch GitHub stats')
       } finally {
         setLoading(false)
       }
